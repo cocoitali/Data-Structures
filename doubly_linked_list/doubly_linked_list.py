@@ -14,9 +14,9 @@ class ListNode:
 
     def insert_after(self, value):
         current_next = self.next
-        self.next = ListNode(value, self, current_next)
+        self.next = ListNode(value, self, current_next) # wrap value in a new Linked List node
         if current_next:
-            current_next.prev = self.next
+            current_next.prev = self.next # move the pointer to the new tail
 
     """Wrap the given value in a ListNode and insert it
   before this node. Note that this node could already
